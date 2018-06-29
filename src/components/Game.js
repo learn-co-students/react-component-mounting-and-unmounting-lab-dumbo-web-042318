@@ -18,6 +18,12 @@ class Game extends React.Component {
 
   // TODO: create a componentWillMount() which will set the current time
 
+  componentWillMount() {
+    this.setState({
+      time: new Date(Date.now()).toLocaleTimeString('en-US')
+    })
+  }
+
   setCurrentTime = () => {
     this.setState({ time: new Date(Date.now())});
   }
